@@ -5,10 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon/weather-forecast.png" type="image/x-icon">
 </head>
 <body>
-    
+    <header>
+        <h1>Weather App</h1>
+    </header>
+
+    <main>
+        <div class="container">
+            <form action="post" id="form">
+                <input type="text" id="City" placeholder="Search for a city">
+                <button type="submit">Get Weather</button>
+            </form>
+
+            <div id="DisplayCity"> </div>
+            <div id="DisplayWeather"> </div>
+            <div id="DisplayHumidity"> </div>
+            
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy;2025</p>
+        <span style="font-weight: 700;">Project by: Ahmed Mohammed Jayanti Mochi</span>
+    </footer>
 
     <script src="script.js"></script>
 </body>

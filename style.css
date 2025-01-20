@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    align-items: center;
+    background: linear-gradient(167deg, hsl(205, 100%, 48%) 40%, hsl(50, 100%, 74%) 70%);
+}
+
+header {
+    background-color: hsl(10, 86%, 66%);
+    color: white;
+    width: 100%;
+    font-size: 3em;
+    text-align: center;
+    font-weight: 800;
+    text-shadow: 6px 6px 4px rgba(0, 0, 0, 0.5);
+}
+
+main {
+
+}
+
+footer {
+    background-color: hsl(10, 86%, 66%);
+    color: white;
+    width: 100%;
+    padding: 0px 0px 0px 25px;
+    position: absolute;
+    bottom: 0;
+}
