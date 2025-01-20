@@ -9,7 +9,9 @@ body {
     flex-direction: column;
     min-height: 100vh;
     align-items: center;
+    justify-content: space-between;
     background: linear-gradient(167deg, hsl(205, 100%, 48%) 40%, hsl(50, 100%, 74%) 70%);
+    font-family: 'Arial', sans-serif;
 }
 
 header {
@@ -20,17 +22,104 @@ header {
     text-align: center;
     font-weight: 800;
     text-shadow: 6px 6px 4px rgba(0, 0, 0, 0.5);
+    padding: 20px;
 }
 
 main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    flex: 1;
+    padding: 20px;
+}
 
+.container {
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+#City {
+    padding: 10px;
+    font-size: 1.2em;
+    width: 60%;
+    border: 2px solid hsl(10, 86%, 66%);
+    border-radius: 5px;
+    margin-right: 10px;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+}
+
+#City:focus {
+    border-color: hsl(50, 100%, 74%);
+    box-shadow: 0 0 10px rgba(50, 50, 255, 0.5);
+}
+
+button {
+    padding: 12px 25px;
+    font-size: 1.2em;
+    background-color: hsl(10, 86%, 66%);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: hsl(50, 100%, 74%);
+}
+
+#DisplayCity, #DisplayWeather, #DisplayHumidity {
+    margin-top: 15px;
+    font-size: 1.3em;
+    color: white;
 }
 
 footer {
     background-color: hsl(10, 86%, 66%);
     color: white;
     width: 100%;
-    padding: 0px 0px 0px 25px;
-    position: absolute;
+    padding: 10px;
+    text-align: center;
+    position: relative;
     bottom: 0;
+}
+
+footer p {
+    font-size: 0.9em;
+    margin: 0;
+}
+
+footer span {
+    font-weight: 700;
+    font-size: 1em;
+}
+
+@media (max-width: 600px) {
+    header {
+        font-size: 2.5em;
+    }
+
+    form {
+        flex-direction: column;
+    }
+
+    #City {
+        width: 80%;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    button {
+        width: 80%;
+    }
 }
