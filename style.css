@@ -10,19 +10,22 @@ body {
     min-height: 100vh;
     align-items: center;
     justify-content: space-between;
-    background: linear-gradient(167deg, hsl(205, 100%, 48%) 40%, hsl(50, 100%, 74%) 70%);
-    font-family: 'Arial', sans-serif;
+    /* background: linear-gradient(167deg, hsl(205, 100%, 48%) 40%, hsl(50, 100%, 74%) 70%); */
+    background-image: url(image/Temp-Heat-Weather.webp);
+    background-position: center;
+    background-size: cover;
+    font-family: 'Arial', sans-serif, "Segoe UI Emoji";
 }
 
 header {
-    background-color: hsl(10, 86%, 66%);
+    background-color: hsla(209, 76%, 38%, 0.477);
     color: white;
     width: 100%;
-    font-size: 3em;
+    font-size: 2em;
     text-align: center;
     font-weight: 800;
     text-shadow: 6px 6px 4px rgba(0, 0, 0, 0.5);
-    padding: 20px;
+    padding: 10px;
 }
 
 main {
@@ -32,7 +35,8 @@ main {
     justify-content: center;
     width: 100%;
     flex: 1;
-    padding: 20px;
+    padding: 10px;
+    margin-bottom: 60px;
 }
 
 .container {
@@ -47,26 +51,26 @@ form {
     margin-bottom: 20px;
 }
 
-#City {
+.CityInput {
     padding: 10px;
     font-size: 1.2em;
-    width: 60%;
-    border: 2px solid hsl(10, 86%, 66%);
+    width: 66%;
+    border: 2px solid hsla(209, 76%, 38%, 0.477);
     border-radius: 5px;
     margin-right: 10px;
     outline: none;
     transition: all 0.3s ease-in-out;
 }
 
-#City:focus {
-    border-color: hsl(50, 100%, 74%);
+.CityInput:focus {
+    border-color: hsl(47, 7%, 25%);
     box-shadow: 0 0 10px rgba(50, 50, 255, 0.5);
 }
 
 button {
     padding: 12px 25px;
     font-size: 1.2em;
-    background-color: hsl(10, 86%, 66%);
+    background-color: hsla(0, 2%, 17%, 0.905);
     color: white;
     border: none;
     border-radius: 5px;
@@ -75,23 +79,62 @@ button {
 }
 
 button:hover {
-    background: linear-gradient(171deg, hsl(205, 100%, 48%) 40%, hsl(50, 100%, 74%) 70%);
+    background-color: hsla(0, 2%, 37%, 0.905);
 }
 
-#DisplayCity, #DisplayWeather, #DisplayHumidity, #DisplayDescription {
-    margin-top: 15px;
-    font-size: 1.3em;
-    color: white;
+.Card {
+    min-width: 300px;
+    background-color: hsla(0, 0%, 31%, 0.532);
+    border-radius: 25px;
+    padding: 2px;
+    box-shadow: 15px 13px 20px 0px hsl(0deg 0% 0% / 74%);
 }
 
-#WeatherEmoji {
+.Card h1 {
+    font-size: 4em;
+    margin-top: 0;
+    margin-bottom: 25px;  
+}
+
+.DisplayCity{
+    font-weight: bold;
+    color: hsl(0, 0%, 0%, 0.75);
+}
+
+.DisplayWeather {
+    margin-bottom: 25px;
+    font-weight: bold;
+    font-size: 2.5em;
+    color: hsl(0, 0%, 0%, 0.75);
+}
+
+.DisplayHumidity {
+    font-weight: bold;
+    margin-bottom: 25px;
+    font-size: 1.5em;
+}
+
+.DisplayDescription {
+    font-style: italic;
+    font-weight: bold;
+    font-size: 2em;
+}
+
+.WeatherEmoji {
     font-size: 8em;
-    color: hsl(51deg 100% 52.59%);
-    text-shadow: 7px 7px 6px hsl(57.05deg 7.26% 14.12%);
+    /* color: hsl(51deg 100% 52.59%); */
+    /* text-shadow: 7px 7px 6px hsl(57.05deg 7.26% 14.12%); */
+}
+
+.DisplayError {
+    font-size: 2.5em;
+    font-weight: bold;   
+    margin: 25px 0px;
+    color: hsl(0, 0%, 0%, 0.75)
 }
 
 footer {
-    background-color: hsl(10, 86%, 66%);
+    background-color: hsla(209, 76%, 38%, 0.477);
     color: white;
     width: 100%;
     padding: 10px;
@@ -101,13 +144,13 @@ footer {
 }
 
 footer p {
-    font-size: 0.9em;
+    font-size: 1.6em;
     margin: 0;
 }
 
 footer span {
     font-weight: 700;
-    font-size: 1em;
+    font-size: 2em;
 }
 
 @media (max-width: 600px) {
